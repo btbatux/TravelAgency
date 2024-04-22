@@ -20,7 +20,7 @@ public class ReservationDao {
         }
     }
 
-    public void insert(Reservation reservation) {
+    public void insert(Reservation reservation) { // Değerlendirme formu 8
         System.out.println("Inserting reservation...");
         System.out.println(reservation);
         String query = "INSERT INTO reservations (guest_citizen_id, guest_full_name, guest_email, guest_phone, " +
@@ -88,7 +88,7 @@ public class ReservationDao {
         return reservations;
     }
 
-    public ArrayList<Reservation> getAll() {
+    public ArrayList<Reservation> getAll() { // Değerlendirme formu 8
         ArrayList<Reservation> reservations = new ArrayList<>();
         String query = "SELECT * FROM reservations ORDER BY id ASC";
 

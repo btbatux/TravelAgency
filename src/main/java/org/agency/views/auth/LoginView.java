@@ -137,7 +137,7 @@ public class LoginView{
         Session session = Main.getSession();
 
         // Attempt to login with the entered credentials
-        if (session.login(username, password)) {
+        if (session.login(username, password)) {  // Değerlendirme formu 9
             // If login is successful, close the login view
             frame.dispose();
         } else {

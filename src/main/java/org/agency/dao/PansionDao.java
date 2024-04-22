@@ -20,7 +20,7 @@ public class PansionDao {
         }
     }
 
-    public void insert(Pansion pansion) {
+    public void insert(Pansion pansion) { // Değerlendirme formu 8
         // SQL query to insert a new row into the 'pansions' table
         String query = "INSERT INTO pansions (name, breakfast, lunch, dinner, midnight_snack, " +
                 "soft_drinks, alcoholic_drinks, snacks, hotel_id) " +
@@ -76,7 +76,7 @@ public class PansionDao {
         return null;
     }
 
-    public ArrayList<Pansion> getAll() {
+    public ArrayList<Pansion> getAll() { // Değerlendirme formu 8
         ArrayList<Pansion> pansions = new ArrayList<>();
         // SQL query to retrieve all rows from the 'pansions' table in ascending order
         // of ID

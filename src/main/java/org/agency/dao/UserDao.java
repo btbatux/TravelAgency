@@ -95,7 +95,7 @@ public class UserDao {
         return null;
     }
 
-    public boolean update(User user) {
+    public boolean update(User user) { // Değerlendirme formu 7
         String query = "UPDATE users SET name = ?, username = ?, email = ?, password = ?, updated_at = ?, role = ? WHERE id = ?";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -109,7 +109,7 @@ public class UserDao {
         }
     }
 
-    public boolean delete(User user) {
+    public boolean delete(User user) { // Değerlendirme formu 7
         String query = "UPDATE users SET deleted_at = ? WHERE id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setDate(1, new java.sql.Date(System.currentTimeMillis()));

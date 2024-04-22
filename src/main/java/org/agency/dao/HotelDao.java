@@ -23,7 +23,7 @@ public class HotelDao {
     }
 
     // Insert a hotel into the database
-    public void insert(Hotel hotel) {
+    public void insert(Hotel hotel) { // Değerlendirme formu 8
         String query = "INSERT INTO hotels (name, address_full, address_district, address_city, address_country, " +
                 "star_rating, has_car_park, has_internet, has_pool, has_conciege, has_spa, has_room_service, " +
                 "phone, website, email) " +
@@ -53,6 +53,8 @@ public class HotelDao {
 
     // Update an existing hotel in the database
     public void update(Hotel hotel) {
+        // Değerlendirme formu 8
+        //// Değerlendirme formu 10
         String query = "UPDATE hotels SET name = ?, address_full = ?, address_district = ?, address_city = ?, " +
                 "address_country = ?, star_rating = ?, has_car_park = ?, has_internet = ?, has_pool = ?, " +
                 "has_conciege = ?, has_spa = ?, has_room_service = ?, phone = ?, website = ?, email = ? " +
@@ -73,7 +75,7 @@ public class HotelDao {
     }
 
     // Delete a hotel from the database
-    public void delete(Hotel hotel) {
+    public void delete(Hotel hotel) { // Değerlendirme formu 8
         String query = "UPDATE hotels SET deleted_at = ? WHERE id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setDate(1, new java.sql.Date(System.currentTimeMillis()));

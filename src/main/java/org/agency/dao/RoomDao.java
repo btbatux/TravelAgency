@@ -18,7 +18,7 @@ public class RoomDao {
         }
     }
 
-    public void insert(Room room) {
+    public void insert(Room room) { // Değerlendirme formu 7
         String query = "INSERT INTO rooms (room_number, type, double_bed_count, single_bed_count, adult_price, " +
                 "child_price, square_meters, has_television, has_balcony, has_air_conditioning, has_minibar, " +
                 "has_valuables_safe, has_gaming_console, has_projector, hotel_id, season_id, pansion_id) " +
@@ -64,7 +64,7 @@ public class RoomDao {
         return null;
     }
 
-    public ArrayList<Room> getAll() {
+    public ArrayList<Room> getAll() { // Değerlendirme formu 7
         ArrayList<Room> rooms = new ArrayList<>();
         String query = "SELECT * FROM rooms ORDER BY id ASC";
 
@@ -129,7 +129,7 @@ public class RoomDao {
         // Handle exceptions as needed
     }
 
-    public void update(Room room) {
+    public void update(Room room) { // Değerlendirme formu 7
         String query = "UPDATE rooms SET room_number = ?, type = ?, double_bed_count = ?, single_bed_count = ?, " +
                 "adult_price = ?, child_price = ?, square_meters = ?, has_television = ?, has_balcony = ?, " +
                 "has_air_conditioning = ?, has_minibar = ?, has_valuables_safe = ?, has_gaming_console = ?, " +
@@ -149,7 +149,7 @@ public class RoomDao {
         }
     }
 
-    public void delete(Room room) {
+    public void delete(Room room) { // Değerlendirme formu 7
         String query = "DELETE FROM rooms WHERE id = ?";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -165,7 +165,7 @@ public class RoomDao {
         }
     }
 
-    public ArrayList<Room> getByHotelId(int hotelId) {
+    public ArrayList<Room> getByHotelId(int hotelId) { // Değerlendirme formu 7
         ArrayList<Room> rooms = new ArrayList<>();
         String query = "SELECT * FROM rooms WHERE hotel_id = ?";
 

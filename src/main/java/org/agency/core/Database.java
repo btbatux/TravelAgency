@@ -21,6 +21,7 @@ public class Database {
     private Database() {
         try {
             // Establishing the connection to the PostgreSQL database
+            // Değerlendirme formu 6
             connection = DriverManager.getConnection(url + database, username, password);
         } catch (SQLException e) {
             // If the database does not exist, prompt the user to create it
